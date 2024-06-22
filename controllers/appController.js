@@ -2,10 +2,12 @@ import { Sequelize } from 'sequelize'
 import {Precio, Categoria, Propiedad} from '../models/index.js'
 
 const inicio = async(req, res)=>{
-
-  const [categorias, precios, casas, departamentos] = await Promise.all([
-    Categoria.findAll({raw: true}),// traerá la consulta mejor estructurada
-    Precio.findAll({raw: true}),
+  const categorias = await Categoria.findAll({raw:true})//el ultimo error segun
+  const precios = await Precio.findAll({raw:true})
+  
+  const [casas, departamentos] = await Promise.all([
+    // Categoria.findAll({raw: true}),// traerá la consulta mejor estructurada
+    // Precio.findAll({raw: true}),
     Propiedad.findAll({
       limit:3,
       where: {

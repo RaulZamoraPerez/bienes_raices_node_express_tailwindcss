@@ -7,6 +7,7 @@ import {esVendedor, formatearFecha} from '../helpers/index.js'
 
 const admin = async(req,res)=>{
 
+   
     //leer el QueryString 
     const {pagina: paginaActual}= req.query
     
