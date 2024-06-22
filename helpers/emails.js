@@ -21,7 +21,7 @@ const emailRegistro = async (datos)=>{//
           html: `<p> Hola ${nombre} comprueba tu cuenta en Bienesraices</p>
           <p>Tu cuenta esta lista solo debes confirmarla en el siguiente enlace:
           <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">confirmar cuenta</a> //asi era pero no jala no se pq debes poner una url de backend esa falta 
-          <a href ="${process.env.BACKEND_URL}:$auth/confirmar/${token}">confirmar cuenta</a> //asi era pero no jala no se pq debes poner una url de backend esa falta 
+          <a href ="${process.env.BACKEND_URL}/auth/confirmar/${token}">confirmar cuenta</a> //asi era pero no jala no se pq debes poner una url de backend esa falta 
           <a href ="${process.env.BACKEND_URL}auth/confirmar/${token}">confirmar cuenta2</a> 
         
           </p>
