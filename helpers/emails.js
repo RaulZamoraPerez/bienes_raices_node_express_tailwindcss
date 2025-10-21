@@ -21,9 +21,11 @@ const emailRegistro = async (datos)=>{//
           text: 'confirma tu cuenta en bienesraices.com',   //es lo mismo 
           html: `<p> Hola ${nombre} comprueba tu cuenta en Bienesraices</p>
           <p>Tu cuenta esta lista solo debes confirmarla en el siguiente enlace:
-             <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">confirmar cuenta</a>    <!-- url local -->
-            <!-- <a href ="${process.env.BACKEND_URL}/auth/confirmar/${token}">confirmar cuenta</a>     ulr hosting  -->
-        
+
+          <!--<a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">confirmar cuenta</a>  local-->
+           <a href ="${process.env.BACKEND_URL}/auth/confirmar/${token}">confirmar cuenta</a> 
+          
+
         
           </p>
 
@@ -54,8 +56,13 @@ const emailOlvidePassword = async (datos)=>{//
         text: 'restablece tu password en bienesraices.com',   //es lo mismo 
         html: `<p> Hola ${nombre} has solicitado restablecer tu password en bienesraices </p>
         <p>sigue el siguiente enlace para generar un password nuevo:
+<<<<<<< HEAD
       <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/olvide-password/${token}">restablecer password</a>      <!--      url de local-->
        <!--  <a href ="${process.env.BACKEND_URL}/auth/olvide-password/${token}">restablecer password</a>                                      url de hosting-->
+=======
+      <!-- local  <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/olvide-password/${token}">restablecer password</a>--> 
+        <a class="hosting" href ="${process.env.BACKEND_URL}/auth/olvide-password/${token}">restablecer password</a> <!--hosting -->
+>>>>>>> 79431af4dacb4751ade5fe45e31ba71527a760cf
         </p>
 
         <p>Si tu no solicitaste el cambio de password  puedes ignorar el mensaje</p>
