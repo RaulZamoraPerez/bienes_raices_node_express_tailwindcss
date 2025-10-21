@@ -104,8 +104,6 @@ npm run db:eliminar
 
 ---
 
-Si quieres, genero un archivo `.env.example` y añado comandos de PowerShell más específicos para ejecutar tareas en paralelo sin abrir múltiples terminales.
-
 
 
 
