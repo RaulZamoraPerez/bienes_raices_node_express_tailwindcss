@@ -447,7 +447,7 @@ const guardar=async(req, res)=>{
         enviado:true
        })
 
-       res.redirect(`/`)
+    //    res.redirect(`/`) esta ya no
 
  }
 

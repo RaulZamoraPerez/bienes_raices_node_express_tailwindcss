@@ -1,9 +1,4 @@
-//importar express hay dos formas 
 
-//NOTA YA NO SE USA CONST = EXPRESS = REQUIERE Y ASI PQ CAMBIAMOS A MODULE
-
-//extrae la dependencia que instalamos y en nodemodules busca la dependencia y la extrae en este archivo
-//const express = require('express')//extrae y lo asigna
 
 import express  from 'express';
 import csrf from 'csurf';
@@ -55,9 +50,6 @@ app.use('/', appRoutes)
 app.use('/auth', usuarioRoutes)
 app.use('/', propiedadesRoutes)
 app.use('/api', apiRoutes)
-
-
-//la ruta , el req es el request es lo que envias al servidor  de node y response es la respuesta
 
 
 

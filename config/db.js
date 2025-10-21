@@ -4,7 +4,7 @@ dotenv.config({path:'.env'})
 const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.
     BD_PASS ?? '',{
     host: process.env.BD_HOST,
-    port:3307,//07 O 6 DEPEDENDIEDO DEL HOSTING Y ASI
+    port:3306,//07 O 6 DEPEDENDIEDO DEL HOSTING Y ASI //en el proyecto en el host es con 3007 pero en el local es el 3006
     dialect:'mysql',//sequelize soporta muchas bd 
     define:{
         timestamps:true

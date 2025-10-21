@@ -84,7 +84,7 @@ protegerRuta,
   eliminar
  )
 
-//
+//cambiar estado
 router.put('/propiedades/:id',  //modifcar put o patch
   protegerRuta,
   cambiarEstado

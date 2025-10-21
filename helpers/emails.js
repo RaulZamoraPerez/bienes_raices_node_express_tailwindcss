@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+
 const emailRegistro = async (datos)=>{//
     const transport = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
@@ -20,9 +21,9 @@ const emailRegistro = async (datos)=>{//
           text: 'confirma tu cuenta en bienesraices.com',   //es lo mismo 
           html: `<p> Hola ${nombre} comprueba tu cuenta en Bienesraices</p>
           <p>Tu cuenta esta lista solo debes confirmarla en el siguiente enlace:
-          //<a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">confirmar cuenta</a> 
-           <a href ="${process.env.BACKEND_URL}/auth/confirmar/${token}">confirmar cuenta</a> 
-          //  <a href ="${process.env.BACKEND_URL}auth/confirmar/${token}">confirmar cuenta2</a> 
+             <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">confirmar cuenta</a>    <!-- url local -->
+            <!-- <a href ="${process.env.BACKEND_URL}/auth/confirmar/${token}">confirmar cuenta</a>     ulr hosting  -->
+        
         
           </p>
 
@@ -53,8 +54,8 @@ const emailOlvidePassword = async (datos)=>{//
         text: 'restablece tu password en bienesraices.com',   //es lo mismo 
         html: `<p> Hola ${nombre} has solicitado restablecer tu password en bienesraices </p>
         <p>sigue el siguiente enlace para generar un password nuevo:
-      //  <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/olvide-password/${token}">restablecer password</a> 
-        <a href ="${process.env.BACKEND_URL}/auth/olvide-password/${token}">restablecer password</a> 
+      <a href ="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/olvide-password/${token}">restablecer password</a>      <!--      url de local-->
+       <!--  <a href ="${process.env.BACKEND_URL}/auth/olvide-password/${token}">restablecer password</a>                                      url de hosting-->
         </p>
 
         <p>Si tu no solicitaste el cambio de password  puedes ignorar el mensaje</p>
